@@ -43,8 +43,8 @@ theme:
   favicon: assets/favicon.ico
   language: az
 
-repo_name: mmzeynalli/integrify
-repo_url: https://github.com/mmzeynalli/integrify
+repo_name: Integrify-SDK/integrify-docs-python
+repo_url: https://github.com/Integrify-SDK/integrify-docs-python
 
 plugins:
   - search
@@ -120,7 +120,7 @@ markdown_extensions:
 extra:
   social:
     - icon: fontawesome/brands/github-alt
-      link: https://github.com/mmzeynalli/integrify
+      link: https://github.com/Integrify-SDK/integrify-docs-python
   analytics:
     provider: goatcounter
 

@@ -146,7 +146,7 @@ async function main() {
         div.innerHTML = '<ul></ul>'
         const ul = document.querySelector('.github-topic-projects ul')
         data.forEach(v => {
-            if (v.full_name === 'mmzeynalli/integrify') {
+            if (v.full_name === 'Integrify-SDK/integrify-docs-python') {
                 return
             }
             const li = document.createElement('li')
