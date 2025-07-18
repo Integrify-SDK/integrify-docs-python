@@ -1,0 +1,8 @@
+[build]
+base = "docs/az"
+publish = "site"
+command = """
+pip3 install uv &&
+uv sync --no-dev --no-group=gh &&
+uv run --no-sync mkdocs build --strict
+"""
