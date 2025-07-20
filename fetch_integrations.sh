@@ -13,6 +13,9 @@ fi
 rm -rf "$TEMP_DIR"
 mkdir -p "$TEMP_DIR"
 
+DEST_SRC="src/"
+rm -rf "$DEST_SRC"/integrify/*
+
 echo "🔄 Starting to fetch integrations..."
 
 while IFS= read -r REPO_URL; do
@@ -27,15 +30,9 @@ while IFS= read -r REPO_URL; do
     git clone --depth 1 "$REPO_URL" "$TEMP_DIR/$REPO_NAME"
 
     # Copy source code
-    SRC_PATH="$TEMP_DIR/$REPO_NAME/src/integrify"
-    DEST_SRC="src/integrify/${INTEGRATION_NAME}"
-
-    if [ "$INTEGRATION_NAME" = "core" ]; then
-        DEST_SRC="src/integrify/"
-    fi
+    SRC_PATH="$TEMP_DIR/$REPO_NAME/src/integrify/"
 
     mkdir -p "$(dirname "$DEST_SRC")"
-    rm -rf "$DEST_SRC"
     cp -r "$SRC_PATH" "$DEST_SRC"
 
     # Copy documentation
