@@ -15,6 +15,8 @@ mkdir -p "$TEMP_DIR"
 
 DEST_SRC="src/"
 rm -rf "$DEST_SRC"/integrify/*
+DEST_DOCS="docs/az/docs/"
+rm -rf "$DEST_DOCS"/integrations/*
 
 echo "🔄 Starting to fetch integrations..."
 
@@ -31,16 +33,11 @@ while IFS= read -r REPO_URL; do
 
     # Copy source code
     SRC_PATH="$TEMP_DIR/$REPO_NAME/src/integrify/"
-
-    mkdir -p "$(dirname "$DEST_SRC")"
     cp -r "$SRC_PATH" "$DEST_SRC"
 
     # Copy documentation
     DOCS_PATH="$TEMP_DIR/$REPO_NAME/docs/az/docs/integrations"
-    DEST_DOCS="docs/az/docs/integrations/$INTEGRATION_NAME"
-    mkdir -p "$DEST_DOCS"
-    rm -rf "$DEST_DOCS"
-    cp -r "$DOCS_PATH"/* "$DEST_DOCS"
+    cp -r "$DOCS_PATH" "$DEST_DOCS"
 
     # Copy partials
     PARTIALS_PATH="$TEMP_DIR/$REPO_NAME/docs/az/partial.yml"
