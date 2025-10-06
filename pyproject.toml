@@ -3,7 +3,7 @@ name = "integrify-docs"
 version = "1.0.0"
 description = "Integrify üçün dokumentasiya repositoriyası."
 authors = [{ name = "mmzeynalli", email = "miradil.zeynalli@gmail.com" }]
-requires-python = "~=3.12"
+requires-python = "==3.12"
 readme = "README.md"
 license = "GPL-3.0-or-later"
 dependencies = [
