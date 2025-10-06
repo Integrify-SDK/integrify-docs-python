@@ -2,8 +2,9 @@
 base = "docs/az"
 publish = "site"
 command = """
-pip3 install --user uv &&
-export PATH=$PATH:$HOME/.local/bin &&
-uv sync --no-dev &&
+pip3 install --user uv && 
+export PATH=$PATH:$HOME/.local/bin && 
+uv pip install . && 
+uv sync --no-dev && 
 uv run --no-sync mkdocs build --strict
 """
