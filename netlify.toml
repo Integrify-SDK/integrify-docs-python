@@ -1,10 +1,9 @@
 [build]
-base = "docs/az"
+base = "."
 publish = "site"
 command = """
 pip3 install --user uv && 
 export PATH=$PATH:$HOME/.local/bin && 
 uv sync --no-dev && 
-uv pip install . && 
-uv run --no-sync mkdocs build --strict
+uv run --no-sync mkdocs build -f docs/az/mkdocs.yml --strict
 """
