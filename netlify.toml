@@ -6,5 +6,6 @@ pip3 install --user uv &&
 export PATH=$PATH:$HOME/.local/bin && 
 uv sync --no-dev && 
 uv pip install . && 
+./fetch_integrations.sh && 
 uv run --no-sync mkdocs build -f docs/az/mkdocs.yml --strict
 """
