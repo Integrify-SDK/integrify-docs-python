@@ -4,7 +4,7 @@ publish = "site"
 command = """
 pip3 install --user uv && 
 export PATH=$PATH:$HOME/.local/bin && 
-uv pip install . && 
 uv sync --no-dev && 
+uv pip install . && 
 uv run --no-sync mkdocs build --strict
 """
