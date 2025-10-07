@@ -76,7 +76,7 @@ plugins:
             extensions:
             - griffe_pydantic
   - generate_nav:
-      navs_dir: src/plugins
+      navs_dir: docs/az/navs
 
 nav:
   - Giriş: index.md

@@ -4,8 +4,9 @@ publish = "site"
 command = """
 pip3 install --user uv && 
 export PATH=$PATH:$HOME/.local/bin && 
-uv sync --no-dev && 
+uv sync && 
 uv pip install . && 
 ./fetch_integrations.sh && 
-uv run --no-sync mkdocs build -f docs/az/mkdocs.yml --strict
+uv run --active --no-sync mkdocs build -f docs/az/mkdocs.yml &&
+rm -rf docs/az/navs/*.yml src/integrify/
 """
