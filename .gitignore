@@ -172,5 +172,5 @@ src/integrify/*
 src/integrify/**
 !src/integrify/.gitkeep
 docs/**/docs/integrations
-docs/**/navs
+docs/**/navs/*.yml
 integrations-tmp/
