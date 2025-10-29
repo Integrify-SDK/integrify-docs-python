@@ -19,8 +19,8 @@ rm -rf "$DEST_SRC"/integrify/*
 
 # Clean docs for both languages
 for LANG in "${LANGUAGES[@]}"; do
-    DEST_DOCS="docs/$LANG/docs/"
-    # Remove folders (and keep index.md)
+    DEST_DOCS="docs/$LANG/docs/integrations"
+    # Remove all folders (and keep index.md)
     find "$DEST_DOCS" -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} +
 done
 
