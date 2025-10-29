@@ -20,7 +20,8 @@ rm -rf "$DEST_SRC"/integrify/*
 # Clean docs for both languages
 for LANG in "${LANGUAGES[@]}"; do
     DEST_DOCS="docs/$LANG/docs/"
-    rm -rf "$DEST_DOCS"/integrations/*
+    # Remove folders (and keep index.md)
+    find "$DEST_DOCS" -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} +
 done
 
 echo "🔄 Starting to fetch integrations..."
