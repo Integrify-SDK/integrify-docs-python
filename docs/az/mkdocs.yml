@@ -95,6 +95,8 @@ nav:
     - "resources/index.md"
     - Contibuting: "resources/contributing.md"
     - "resources/code-architecture.md"
+  - Inteqrasiyalar:
+    - integrations/index.md
 
 markdown_extensions:
   - codehilite:
@@ -132,7 +134,7 @@ markdown_extensions:
 extra:
   alternate:
     - name: Azərbaycanca
-      link: /az/
+      link: /
       lang: az
     - name: English
       link: /en/

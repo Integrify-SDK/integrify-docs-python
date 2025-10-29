@@ -7,7 +7,7 @@ export PATH=$PATH:$HOME/.local/bin &&
 uv sync && 
 uv pip install . && 
 ./fetch_integrations.sh && 
-uv run --active --no-sync mkdocs build -d ../site/az -f docs/az/mkdocs.yml --strict && 
+uv run --active --no-sync mkdocs build -d ../site/ -f docs/az/mkdocs.yml --strict && 
 uv run --active --no-sync mkdocs build -d ../site/en -f docs/en/mkdocs.yml --strict && 
 rm -rf docs/navs/*.yml src/integrify/
 """
