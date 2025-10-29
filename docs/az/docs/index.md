@@ -1,3 +1,5 @@
+# Integrify
+
 <p align="center">
   <a href="https://integrify.mmzeynalli.dev/"><img width="400" src="https://raw.githubusercontent.com/mmzeynalli/integrify/main/docs/az/docs/assets/integrify.png" alt="Integrify"></a>
 </p>
@@ -33,7 +35,7 @@
 
 **Dokumentasiya**: [https://integrify.mmzeynalli.dev](https://integrify.mmzeynalli.dev)
 
-**Kod**: [https://github.com/mmzeynalli/integrify](https://github.com/mmzeynalli/integrify)
+**Kod**: [https://github.com/mmzeynalli/Integrify-SDK/repositories](https://github.com/mmzeynalli/Integrify-SDK/repositories)
 
 ---
 
@@ -51,7 +53,9 @@
 <div class="termy">
 
 ```console
-pip install integrify
+$ # pip install integrify-integration
+$ pip install integrify-epoint
+---> 100%
 ```
 
 </div>
@@ -100,7 +104,7 @@ class ApiResponse:
     """Cavab sorğusunun body-si"""
 ```
 
-## Dəstəklənən API inteqrasiyaları
+## Dəstəklənən API inteqrasiyaları { #supported-integrations }
 
 ???+ warning
     Bütün sorğular rəsmi dokumentasiyalara uyğun yazılsalar da, Integrify qeyri-rəsmi API klient-dir.
@@ -112,4 +116,5 @@ class ApiResponse:
 | LSIM            |                                                       ✅                                                       |                                                       ✅                                                       | [Tam](https://integrify.mmzeynalli.dev/integrations/lsim/about/)                                              | ✅                                                                                                             | [Miradil Zeynallı](https://github.com/mmzeynalli) |
 | Posta Guvercini |                                                       ✅                                                       |                                                       ✅                                                       | [Tam](https://integrify.mmzeynalli.dev/integrations/posta-guvercini/about/)                                   | ✅                                                                                                             | [Zaman Kazımov](https://github.com/kazimovzaman2) |
 | Azericard       |                                                       ✅                                                       | ![loading](https://raw.githubusercontent.com/mmzeynalli/integrify/main/docs/az/docs/assets/spinner-solid.svg) | [Tam](https://integrify.mmzeynalli.dev/integrations/azericard/about)                                          | ![loading](https://raw.githubusercontent.com/mmzeynalli/integrify/main/docs/az/docs/assets/spinner-solid.svg) | [Miradil Zeynallı](https://github.com/mmzeynalli) |
+| Clopos          |                                                       ✅                                                       |                                                       ✅                                                       | [Full](https://integrify.mmzeynalli.dev/integrations/clopos/about)                                            | ![loading](https://raw.githubusercontent.com/mmzeynalli/integrify/main/docs/az/docs/assets/spinner-solid.svg) | [Miradil Zeynallı](https://github.com/mmzeynalli) |
 | Payriff         | ![loading](https://raw.githubusercontent.com/mmzeynalli/integrify/main/docs/az/docs/assets/spinner-solid.svg) | ![loading](https://raw.githubusercontent.com/mmzeynalli/integrify/main/docs/az/docs/assets/spinner-solid.svg) | ![loading](https://raw.githubusercontent.com/mmzeynalli/integrify/main/docs/az/docs/assets/spinner-solid.svg) | ![loading](https://raw.githubusercontent.com/mmzeynalli/integrify/main/docs/az/docs/assets/spinner-solid.svg) | [Vahid Həsənzadə](https://github.com/vahidzhe)    |

@@ -1,0 +1,4 @@
+INHERIT: ../az/mkdocs.yml
+
+theme:
+  language: en

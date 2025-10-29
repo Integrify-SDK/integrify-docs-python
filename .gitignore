@@ -171,6 +171,8 @@ site
 src/integrify/*
 src/integrify/**
 !src/integrify/.gitkeep
-docs/**/docs/integrations
-docs/**/navs/*.yml
+docs/**/docs/integrations/*
+docs/**/docs/integrations/**
+!docs/**/docs/integrations/index.md
+docs/navs/*.yml
 integrations-tmp/

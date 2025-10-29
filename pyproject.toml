@@ -20,4 +20,6 @@ Repository = "https://github.com/Integrify-SDK/integrify-docs-python"
 Documentation = "https://integrify.mmzeynalli.dev/"
 
 [project.entry-points."mkdocs.plugins"]
-generate_nav = "plugins.generate_nav:IntegrationsNavPlugin"
+generate_nav = "plugin:IntegrationsNavPlugin"
+multilang = "plugin:MultiLangPlugin"
+translation_placeholder = "plugin:TranslationPlaceholderPlugin"

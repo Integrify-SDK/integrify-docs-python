@@ -1,5 +1,6 @@
 https://github.com/Integrify-SDK/integrify-core-python
 https://github.com/Integrify-SDK/integrify-azericard-python
+https://github.com/Integrify-SDK/integrify-clopos-python
 https://github.com/Integrify-SDK/integrify-epoint-python
 https://github.com/Integrify-SDK/integrify-kapitalbank-python
 https://github.com/Integrify-SDK/integrify-lsim-python

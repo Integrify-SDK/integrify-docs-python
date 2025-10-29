@@ -2,9 +2,11 @@ site_name: Integrify
 site_description: Integrify API inteqrasiyalarını rahatlaşdıran sorğular kitabaxanasıdır.
 site_url: https://integrify.mmzeynalli.dev
 
+copyright: Copyright © 2023-2025 Miradil Zeynalli
+
 theme:
   name: material
-  custom_dir: overrides
+  custom_dir: ../az/overrides
   features:
     - content.code.annotate
     - content.code.copy
@@ -16,6 +18,16 @@ theme:
     - search.share
     - search.suggest
     - toc.follow
+    - navigation.footer
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.path
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
   palette:
   - media: "(prefers-color-scheme)"
     toggle:
@@ -48,9 +60,6 @@ repo_url: https://github.com/Integrify-SDK/integrify-docs-python
 
 plugins:
   - search
-  - social:
-      cards_layout_options:
-        logo: assets/integrify.png
   - panzoom:
       full_screen: True
   - mkdocstrings:
@@ -76,13 +85,16 @@ plugins:
             extensions:
             - griffe_pydantic
   - generate_nav:
-      navs_dir: docs/az/navs
+      navs_dir: docs/navs
+  - multilang
+  - translation_placeholder
 
 nav:
-  - Giriş: index.md
+  - index.md
   - Resurslar:
+    - "resources/index.md"
     - Contibuting: "resources/contributing.md"
-    - Kod Arxitekturası: "resources/code-architecture.md"
+    - "resources/code-architecture.md"
 
 markdown_extensions:
   - codehilite:
@@ -118,9 +130,18 @@ markdown_extensions:
   - pymdownx.tilde
 
 extra:
+  alternate:
+    - name: Azərbaycanca
+      link: /az/
+      lang: az
+    - name: English
+      link: /en/
+      lang: en
   social:
     - icon: fontawesome/brands/github-alt
       link: https://github.com/Integrify-SDK/integrify-docs-python
+    - icon: fontawesome/solid/globe
+      link: https://mmzeynalli.dev
   analytics:
     provider: goatcounter
 
