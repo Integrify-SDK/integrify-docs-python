@@ -6,27 +6,31 @@
 <p align="center">
     <em>Integrify is library for easing API integrations</em>
 </p>
-<p  style='display:flex;flex-wrap:wrap;gap:5px;width:70%;justify-content:flex-start;margin: 0 auto;'>
-<a href="https://github.com/mmzeynalli/integrify/actions/workflows/test.yml" target="_blank">
-    <img src="https://github.com/mmzeynalli/integrify/actions/workflows/test.yml/badge.svg?branch=main" alt="Test">
+
+<p align="center">
+<a href="https://github.com/Integrify-SDK/integrify-core-python/actions/workflows/test.yml" target="_blank">
+    <img src="https://github.com/Integrify-SDK/integrify-core-python/actions/workflows/test.yml/badge.svg?branch=main" alt="Test">
 </a>
-<a href="https://github.com/mmzeynalli/integrify/actions/workflows/publish.yml" target="_blank">
-    <img src="https://github.com/mmzeynalli/integrify/actions/workflows/publish.yml/badge.svg" alt="Publish">
+<a href="https://github.com/Integrify-SDK/integrify-core-python/actions/workflows/publish.yml" target="_blank">
+    <img src="https://github.com/Integrify-SDK/integrify-core-python/actions/workflows/publish.yml/badge.svg" alt="Publish">
 </a>
-<a href="https://pypi.org/project/integrify" target="_blank">
-  <img src="https://img.shields.io/pypi/v/integrify?color=%2334D058&label=pypi%20package" alt="Package version">
+<a href="https://pypi.org/project/integrify-core" target="_blank">
+  <img src="https://img.shields.io/pypi/v/integrify-core?color=%2334D058&label=pypi%20package" alt="Package version">
 </a>
 <a href="https://app.netlify.com/sites/integrify-docs/deploys">
-  <img src="https://api.netlify.com/api/v1/badges/d8931b6a-80c7-41cb-bdbb-bf6ef5789f80/deploy-status" alt="Netlify Status">
+  <img src="https://api.netlify.com/api/v1/badges/0126ae9d-efee-433f-8c04-15b2993653e8/deploy-statusdeploy-status" alt="Netlify Status">
 </a>
-<a href="https://pepy.tech/project/integrify" target="_blank">
-  <img src="https://static.pepy.tech/badge/integrify" alt="Downloads">
+</p>
+
+<p align="center">
+<a href="https://pepy.tech/project/integrify-core" target="_blank">
+  <img src="https://static.pepy.tech/badge/integrify-core" alt="Downloads">
 </a>
-<a href="https://pypi.org/project/integrify" target="_blank">
-    <img src="https://img.shields.io/pypi/pyversions/integrify.svg?color=%2334D058" alt="Supported Python versions">
+<a href="https://pypi.org/project/integrify-core" target="_blank">
+    <img src="https://img.shields.io/pypi/pyversions/integrify-core.svg?color=%2334D058" alt="Supported Python versions">
 </a>
-<a href="https://coverage-badge.samuelcolvin.workers.dev/redirect/mmzeynalli/integrify" target="_blank">
-    <img src="https://coverage-badge.samuelcolvin.workers.dev/mmzeynalli/integrify.svg" alt="Coverage">
+<a href="https://coverage-badge.samuelcolvin.workers.dev/redirect/Integrify-SDK/integrify-core-python" target="_blank">
+    <img src="https://coverage-badge.samuelcolvin.workers.dev/Integrify-SDK/integrify-core-python.svg" alt="Coverage">
 </a>
 
 </p>
