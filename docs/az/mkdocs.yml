@@ -95,8 +95,7 @@ nav:
     - "resources/index.md"
     - Contibuting: "resources/contributing.md"
     - "resources/code-architecture.md"
-  - Inteqrasiyalar:
-    - integrations/index.md
+
 
 markdown_extensions:
   - codehilite:
