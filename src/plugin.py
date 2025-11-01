@@ -190,14 +190,37 @@ class TranslationPlaceholderPlugin(BasePlugin):
             md_files.add(str(relative_path))
         return md_files
 
-    def create_placeholder_content(self, lang_code: str) -> str:
-        """Get placeholder content for the given language."""
-        return self.templates.get(
+    def extract_h1_title(self, file_path: Path) -> str:
+        """Extract the first H1 heading from a markdown file."""
+        try:
+            content = file_path.read_text(encoding="utf-8")
+
+            # Look for H1 heading (# Title)
+            for line in content.split("\n"):
+                stripped = line.strip()
+                if stripped.startswith("# ") and not stripped.startswith("##"):
+                    # Remove the # and any leading/trailing whitespace
+                    return stripped[1:].strip()
+
+            return None
+        except Exception as e:
+            print(f"  ⚠ Could not read H1 from {file_path}: {e}")
+            return None
+
+    def create_placeholder_content(self, lang_code: str, h1_title: str = None) -> str:
+        """Get placeholder content for the given language, optionally with H1 title."""
+        template = self.templates.get(
             lang_code,
             self.templates.get(
                 "en", "# Translation Missing\n\nThis page has not been translated yet."
             ),
         )
+
+        # Prepend the H1 title if available
+        if h1_title:
+            return f"# {h1_title}\n\n{template}"
+
+        return template
 
     def on_files(self, files: Files, /, *, config: MkDocsConfig):
         """Generate placeholder files for missing translations."""
@@ -241,12 +264,18 @@ class TranslationPlaceholderPlugin(BasePlugin):
 
                 for missing_file in sorted(missing_files):
                     target_path = docs_path / missing_file
+                    source_path = other_docs_path / missing_file
+
+                    # Extract H1 title from the source file
+                    h1_title = self.extract_h1_title(source_path)
 
                     # Create directories if they don't exist
                     target_path.parent.mkdir(parents=True, exist_ok=True)
 
-                    # Write placeholder content
-                    placeholder_content = self.create_placeholder_content(current_lang)
+                    # Write placeholder content with H1 title
+                    placeholder_content = self.create_placeholder_content(
+                        current_lang, h1_title
+                    )
                     target_path.write_text(placeholder_content, encoding="utf-8")
 
                     # Add to files collection
@@ -258,6 +287,7 @@ class TranslationPlaceholderPlugin(BasePlugin):
                     )
                     files.append(new_file)
 
-                    print(f"  ✓ Created placeholder: {missing_file}")
+                    title_info = f" (title: {h1_title})" if h1_title else ""
+                    print(f"  ✓ Created placeholder: {missing_file}{title_info}")
 
         return files

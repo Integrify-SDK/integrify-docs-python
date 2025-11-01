@@ -69,22 +69,24 @@ while IFS= read -r REPO_URL; do
             echo "    ⚠️  No documentation found at $DOCS_PATH"
         fi
 
-        # Copy partials
-        PARTIALS_PATH="$LANG_DIR/partial.yml"
-        DEST_PARTIALS="docs/navs/$INTEGRATION_NAME.yml"
-
-        if [ -f "$PARTIALS_PATH" ]; then
-            mkdir -p "docs/$LANG/navs"
-            cp "$PARTIALS_PATH" "$DEST_PARTIALS"
-            echo "    ✓ Copied $LANG partials"
-        else
-            echo "    ⚠️  No partial.yml found at $PARTIALS_PATH"
-        fi
+        echo "✅ Done with $REPO_NAME"
+        echo ""
     done
 
-    echo "✅ Done with $REPO_NAME"
-    echo ""
+    # Copy partials
+    PARTIALS_PATH="$TEMP_DIR/$REPO_NAME/docs/partial.yml"
+    DEST_PARTIALS="docs/navs/$INTEGRATION_NAME.yml"
+
+    if [ -f "$PARTIALS_PATH" ]; then
+        cp "$PARTIALS_PATH" "$DEST_PARTIALS"
+        echo "    ✓ Copied partials"
+    else
+        echo "    ⚠️  No partial.yml found at $PARTIALS_PATH"
+    fi
+
 done < "$REPO_LIST_FILE"
+
+cp -r docs/az/docs/integrations/core docs/en/docs/integrations/
 
 # Clean up temp files
 rm -rf "$TEMP_DIR"

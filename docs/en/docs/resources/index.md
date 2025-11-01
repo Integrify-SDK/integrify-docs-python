@@ -1,3 +1,3 @@
-# Resources
+# Resurslar
 
-You can learn about Integrify and its structure and architecture here.
+Burada ümumi Integrify və onun strukturu haqqında öyrənə bilərsiniz.
