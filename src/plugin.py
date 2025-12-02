@@ -1,6 +1,5 @@
 import os
 from pathlib import Path
-from typing import Any, List, Union
 
 import yaml
 from mkdocs.config import config_options
@@ -39,10 +38,10 @@ class MultiLangPlugin(BasePlugin):
     # Taken from FastAPI scripts/mkdocs_hooks.py
     def _generate_multilang_nav(
         self,
-        items: List[Union[Page, Section, Link]],
+        items: list[Page | Section | Link],
         config: MkDocsConfig,
     ):
-        new_items: list[Union[Page, Section, Link]] = []
+        new_items: list[Page | Section | Link] = []
         for item in items:
             if isinstance(item, Section):
                 new_title = item.title
@@ -73,7 +72,7 @@ class MultiLangPlugin(BasePlugin):
         *,
         config: MkDocsConfig,
         files: Files,
-        **kwargs: Any,
+        **kwargs,
     ):
         new_items = self._generate_multilang_nav(nav.items, config=config)
         return Navigation(items=new_items, pages=nav.pages)
@@ -97,7 +96,7 @@ class MultiLangPlugin(BasePlugin):
     def resolve_files(
         self,
         *,
-        items: List[Any],
+        items: list[str | dict[str, str | list]],
         files: Files,
         config: MkDocsConfig,
     ) -> None:
